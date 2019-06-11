@@ -1,0 +1,35 @@
+# Indice degli argomenti trattati
+
+- Come creare un nuovo progetto
+- Introduzione al layout di Unity
+- Movimenti all'interno della scena (mouse/tastiera)
+- Scena
+  - come utilizzare i **Gizmo**
+  - introduzione alla toolbar
+  - introduzione al Game Tab
+- Asset store
+- Differenza tra *Hierarchy* e *Project*
+- Inspector
+  - Introduzione ai *Component*
+    - *Transform*
+    - *Mesh filter*
+    - *Mesh renderer*
+    - *Mesh collider*
+    - *Material*
+      - creazione nuovo materiale
+- Modifica al colore della "gamemode"
+- Aggiunta oggetti alla scena
+- Luce (directional light)
+  - differenza tra attributo baked e real time
+  - ombre
+- *Camera* e *Skybox*
+- Introduzione ai *Prefab*
+- Oggetti padre/figlio ed effetti
+- Introduzione alla fisica
+  - *Rigidbody*
+  - come far rimbalzare un cubo (*RigidMaterial*)
+- Scripting
+  - creazione script
+  - comportamento metodi predefiniti (awake, start, update, fixedupdate, lateupdate)
+  - variabile *Vector3*
+
