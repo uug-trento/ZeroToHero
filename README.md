@@ -13,3 +13,7 @@ Brain storming per decidere i punti chiave del gioco. Implementazione delle mecc
 ## 10.2 - ANIMATION
 
 Introduzione ai trigger ed i collezionabili. Creazione di semplici animazioni e gestione di queste tramite animator controller e animator override controller.
+
+## 10.2 - UI
+
+Miglioramento del gameplay: ora il giocatore ha la possibilità di muovere la camera con il mouse ed il player con WASD relativamente alla posizione della camera. Introduzione agli elementi della UI, con particolare focus sui canvas di tipo "Screen Space - Overlay" e "World Space".
