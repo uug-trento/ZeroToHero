@@ -4,11 +4,11 @@ Come sviluppare un videogioco partendo dalle basi
 
 ## 10.0 - BASICS
 
-Primo incontro focalizzato sulle basi di Unity
+Introduzione al layout del framework, ai concetti di base, ai componenti di default e agli oggetti primitivi di Unity.
 
 ## 10.1 - PLAYER MOVEMENT
 
-Brain storming per decidere i punti chiave del gioco. Implementazione delle meccaniche del giocatore che sono state decise come fondamentali (movimento,corsa, salto, doppio salto)
+Brain storming per decidere i punti chiave del gioco. Implementazione delle meccaniche del giocatore che sono state decise come fondamentali (movimento,corsa, salto, doppio salto).
 
 ## 10.2 - ANIMATION
 
