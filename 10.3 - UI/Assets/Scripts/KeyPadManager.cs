@@ -12,18 +12,28 @@ public class KeyPadManager : MonoBehaviour
     private bool focusOnKeypad;
     private bool canSwitch = true;
 
-    private void OnTriggerEnter(Collider other) {
-        textLabel.text = "Press E";
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            textLabel.text = "Press E";
+        }
     }
 
-    private void OnTriggerExit(Collider other) {
-        textLabel.text = "";
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject.CompareTag("Player"))
+        {
+            textLabel.text = "";
+        }
     }
 
-    private void OnTriggerStay(Collider other) {
-        if(Input.GetKeyDown(KeyCode.E) && canSwitch && !focusOnKeypad)
+    private void OnTriggerStay(Collider other)
+    {
+        if (Input.GetKeyDown(KeyCode.E) && other.gameObject.CompareTag("Player") && canSwitch && !focusOnKeypad)
         {
             player.GetComponent<PlayerMovement>().enabled = false;
+            player.GetComponent<Rigidbody>().velocity = Vector3.zero; // To avoid exiting from the trigger due to the accumulated forces 
             player.GetComponent<PlayerMovement>().cam.GetComponent<Camera>().enabled = false;
 
             keypadCam.enabled = true;
@@ -33,7 +43,7 @@ public class KeyPadManager : MonoBehaviour
             focusOnKeypad = true;
             StartCoroutine(WaitForSwitch(0.1f));
         }
-        else if((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Escape)) && canSwitch && focusOnKeypad)
+        else if ((Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Escape)) && other.gameObject.CompareTag("Player") && canSwitch && focusOnKeypad)
         {
             player.GetComponent<PlayerMovement>().enabled = true;
             player.GetComponent<PlayerMovement>().cam.GetComponent<Camera>().enabled = true;
@@ -43,7 +53,7 @@ public class KeyPadManager : MonoBehaviour
             textLabel.text = "Press E";
 
             focusOnKeypad = false;
-            
+
             StartCoroutine(WaitForSwitch(0.1f));
         }
     }

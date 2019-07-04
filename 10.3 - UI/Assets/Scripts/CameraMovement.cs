@@ -25,9 +25,9 @@ public class CameraMovement : MonoBehaviour
     void LateUpdate()
     {
         Quaternion turnAngleHor = Quaternion.AngleAxis(Input.GetAxis("Mouse X") * rotationSpeed, Vector3.up);
-        Quaternion turnAngleVer = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * rotationSpeed, Vector3.right); 
+        //Quaternion turnAngleVer = Quaternion.AngleAxis(Input.GetAxis("Mouse Y") * rotationSpeed, Vector3.right); 
 
-        _offset = turnAngleVer * turnAngleHor *_offset;
+        _offset = /*turnAngleVer * */ turnAngleHor *_offset;
 
         Vector3 updatedPosition = playerTransform.position + _offset;
 
